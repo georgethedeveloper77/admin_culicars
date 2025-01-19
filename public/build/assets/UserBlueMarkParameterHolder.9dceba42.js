@@ -1,0 +1,1 @@
+class t{constructor(){this.loginUserId="",this.note=""}UserBlueMarkParameterHolder(){this.loginUserId="",this.note=""}toMap(){const e={};return e.user_id=this.loginUserId,e.note=this.note,e}}export{t as U};

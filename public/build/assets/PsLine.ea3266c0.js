@@ -1,0 +1,1 @@
+import{_ as r}from"./plugin-vue_export-helper.21dcd24c.js";import{o as t,c as o,n as a}from"./app.2982e019.js";const n={name:"PsLine",props:{textColor:{type:String,default:"text-fePrimary-500 dark:text-feSecondary-900"}}};function s(c,l,e,i,d,f){return t(),o("div",{class:a(["border border-t-0",e.textColor])},null,2)}var _=r(n,[["render",s]]);export{_ as default};

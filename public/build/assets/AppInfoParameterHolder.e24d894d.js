@@ -1,0 +1,1 @@
+class s{constructor(){this.startDate="",this.endDate="",this.userId=""}AppInfoParameterHolder(){this.startDate="",this.endDate="",this.userId=""}toMap(){const t={};return t.start_date=this.startDate,t.end_date=this.endDate,t.user_id=this.userId,t}}export{s as A};

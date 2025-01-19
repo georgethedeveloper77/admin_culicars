@@ -1,0 +1,40 @@
+import{i as h,bB as k,j as B,Q as b,o as F,c as P,a as A}from"./app.2982e019.js";import{$ as m,S as q}from"./sortable.esm.863a0234.js";const N={__name:"DropZone",props:{images:Object,edit_mode:{type:Number,default:0},item_id:{type:Number,default:0},max_image_upload:{type:Number},autoProcessQueue:{default:!1},dir:String},emits:["clicked"],setup(w,{expose:_,emit:d}){const l=w;h(),_({autoProcessQueuestart:S,acctiveFiles:C,currentFiles:L});const f=h(null);let a=h();k({extra_caption:[]});const z=`
+
+<div class="dz-preview dz-file-preview " >
+  <div class="dz-image flex justify-center items-center"><img data-dz-thumbnail class="w-full"/></div>
+  <div class="dz-details">
+    <div class="dz-size"><span data-dz-size></span></div>
+    <div class="dz-filename"><span data-dz-name></span></div>
+  </div>
+  <div class="dz-progress mt-2">
+    <span class="dz-upload" data-dz-uploadprogress></span>
+  </div>
+  <div class="dz-error-message"><span data-dz-errormessage></span></div>
+  <div class="dz-success-mark">
+    <svg
+      width="54"
+      height="54"
+      viewBox="0 0 54 54"
+      fill="white"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M10.2071 29.7929L14.2929 25.7071C14.6834 25.3166 15.3166 25.3166 15.7071 25.7071L21.2929 31.2929C21.6834 31.6834 22.3166 31.6834 22.7071 31.2929L38.2929 15.7071C38.6834 15.3166 39.3166 15.3166 39.7071 15.7071L43.7929 19.7929C44.1834 20.1834 44.1834 20.8166 43.7929 21.2071L22.7071 42.2929C22.3166 42.6834 21.6834 42.6834 21.2929 42.2929L10.2071 31.2071C9.81658 30.8166 9.81658 30.1834 10.2071 29.7929Z"
+      />
+    </svg>
+  </div>
+  <div class="dz-error-mark">
+    <svg
+      width="54"
+      height="54"
+      viewBox="0 0 54 54"
+      fill="white"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M26.2929 20.2929L19.2071 13.2071C18.8166 12.8166 18.1834 12.8166 17.7929 13.2071L13.2071 17.7929C12.8166 18.1834 12.8166 18.8166 13.2071 19.2071L20.2929 26.2929C20.6834 26.6834 20.6834 27.3166 20.2929 27.7071L13.2071 34.7929C12.8166 35.1834 12.8166 35.8166 13.2071 36.2071L17.7929 40.7929C18.1834 41.1834 18.8166 41.1834 19.2071 40.7929L26.2929 33.7071C26.6834 33.3166 27.3166 33.3166 27.7071 33.7071L34.7929 40.7929C35.1834 41.1834 35.8166 41.1834 36.2071 40.7929L40.7929 36.2071C41.1834 35.8166 41.1834 35.1834 40.7929 34.7929L33.7071 27.7071C33.3166 27.3166 33.3166 26.6834 33.7071 26.2929L40.7929 19.2071C41.1834 18.8166 41.1834 18.1834 40.7929 17.7929L36.2071 13.2071C35.8166 12.8166 35.1834 12.8166 34.7929 13.2071L27.7071 20.2929C27.3166 20.6834 26.6834 20.6834 26.2929 20.2929Z"
+      />
+    </svg>
+  </div>
+</div>
+`;B(function(v){if(f.value!==null){let s="",p=l.dir.replaceAll("\\","");p!=null&&p!=""?s="/"+l.dir:s="",a.value=new m(f.value,{previewTemplate:z,url:s+"/item/upload-multi-images",method:"Post",maxFiles:l.max_image_upload,thumbnailWidth:250,thumbnailHeight:250,headers:{"X-CSRF-TOKEN":b().props.csrf},acceptedFiles:"image/jpeg,image/png,image/jpg",autoProcessQueue:!1,addRemoveLinks:!0,init:function(g){this.on("thumbnail",function(e,t){e.previewElement.childNodes[1].childNodes[0]}),this.on("queuecomplete",function(){this.getActiveFiles().length==0&&d("queueComplete",!0)}),this.on("addedfile",function(e){var t=e.caption==null?"":e.caption;if(e._captionLabel=m.createElement("<div class='flex mt-6'><p>File Info:</p>"),a.value.getAcceptedFiles().length==0){const r=document.createElement("div");r.innerHTML='<label for="image" class="image-label text-xxs" id="defaultText">Default</label>',e.previewElement.firstElementChild.appendChild(r),e._defaultLabel=r}else e._defaultLabel="";e._captionBox=m.createElement("<input class='block dark:bg-feAchromatic-800 w-full px-3 py-2 text-sm shadow-sm dark:placeholder-feSecondary-300 placeholder-feSecondary-500 text-feSecondary-500 dark:text-feSecondary-400 rounded border border-feSecondary-200 hover:border-feSecondary-400 dark:border-feSecondary-400 hover:dark:border-feSecondary-50 focus:outline-none focus:border-none focus:ring-2 focus:ring-fePrimary-300 ring-fePrimary-300 placeholder-feSecondary-500 dark:placeholder-feSecondary-400 opacity-100' id='"+e.upload.uuid+"' type='text' name='caption[]'  value='"+t+"'>"),e._order=m.createElement("<input class='block dark:bg-feAchromatic-800 w-full px-3 py-2 text-sm shadow-sm dark:placeholder-feSecondary-300 placeholder-feSecondary-500 text-feSecondary-500 dark:text-feSecondary-400 rounded border border-feSecondary-200 hover:border-feSecondary-400 dark:border-feSecondary-400 hover:dark:border-feSecondary-50 focus:outline-none focus:border-none focus:ring-2 focus:ring-fePrimary-300 ring-fePrimary-300 placeholder-feSecondary-500 dark:placeholder-feSecondary-400 opacity-100' id='"+e.upload.uuid+"' type='hidden' name='order[]'  value='"+(a.value.getAcceptedFiles().length+1)+"'>"),e.previewElement.appendChild(e._captionLabel),e.previewElement.appendChild(e._captionBox),e.previewElement.appendChild(e._order),e.previewElement.querySelector("[data-dz-name]").textContent=e.upload.filename,e._captionBox.name=e.filename,e._captionBox.onkeyup=function(){n()},d("fileLength",a.value.getAcceptedFiles().length+1);function n(){d("caption",e._captionBox)}}),this.on("sending",function(e,t,n){n.append("edit_mode",l.edit_mode),n.append("item_id",l.item_id),n.append("max_files",3),n.append("caption",e._captionBox.value),n.append("order",e._order.value)}),this.on("removedfile",function(e){if(a.value.files=a.value.files.filter(function(t){return t.name!==e.name}),a.value.files[0]!=null){const t=document.createElement("div");t.innerHTML='<label for="image" class="image-label text-xxs" id="defaultText">Default</label>',a.value.files[0].previewElement.firstElementChild.appendChild(t),a.value.files[0]._defaultLabel=t}d("removeImage",e.filename)}),this.on("complete",function(e){}),this.on("processing",function(){this.options.autoProcessQueue=!0}),this.on("maxfilesexceeded",function(e){e.previewElement.remove(),d("maxfilesexceeded")}),this.on("success",function(e,t){if(t.msg=="success"){let x=function(){d("caption",e._captionBox)};e.filename=t.success,e._captionBox.name=e.filename,e._captionBox.onkeyup=function(){x()},d("clicked",e.filename)}else if(t.msg=="fail"){var n,r,o,c,u,i=t.success;for(e.previewElement.classList.add("dz-error"),c=e.previewElement.querySelectorAll("[data-dz-errormessage]"),u=[],r=0,o=c.length;r<o;r++)n=c[r],u.push(n.textContent=i);return u}})}}),q.create(document.getElementById("dropzone"),{items:".dz-preview",cursor:"move",opacity:.5,containment:"#dropzone",distance:20,tolerance:"pointer",onEnd:function(g){var e=a.value.files,t=[],n=[];const r=document.querySelectorAll(".dropzone .dz-preview");if(document.querySelectorAll(".dropzone .dz-preview "),r.forEach(function(o,c){var u=o.querySelector(".dz-filename [data-dz-name]").innerHTML;o.querySelector("input[name='order[]']").value,e.every(function(i,x){if(i.name===u){i._order.value=c+1,t.push(i),n.push({id:i.upload.uuid,order:i._order.value});const y=document.querySelector("#defaultText");return y!=null&&y.remove(),!1}return!0})}),d("newOrder",n),a.value.files=t,a.value.files[0]!=null){const o=document.createElement("div");o.innerHTML='<label for="image" class="image-label text-xxs" id="defaultText">Default</label>',a.value.files[0].previewElement.firstElementChild.appendChild(o),a.value.files[0]._defaultLabel=o}}}),l.images&&l.images.sort((e,t)=>e.ordering-t.ordering).forEach(e=>{var t=b().props.uploadUrl+"/"+e.imgPath;let n={name:e.imgPath,filename:e.imgPath,caption:e.imgDesc,upload:{filename:e.imgPath,uuid:e.imgId},size:12345,accepted:!0};a.value.displayExistingFile(n,t),a.value.createThumbnailFromUrl(n,t),a.value.files.push(n),a.value.emit("complete",n)})}});function S(v){a.value.on("sending",function(s,E,p){p.append("item_id",v)}),a.value.processQueue()}function C(){a.on("queuecomplete",function(){return a.value.getActiveFiles().length})}function L(){return a.value.getAcceptedFiles().length}return(v,s)=>(F(),P("div",null,[A("div",{ref_key:"dropRef",ref:f,id:"dropzone",class:"dropzone custom-dropzone"},null,512)]))}};export{N as default};

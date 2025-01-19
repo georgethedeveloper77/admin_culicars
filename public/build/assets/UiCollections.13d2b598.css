@@ -1,0 +1,1 @@
+@keyframes progress-indeterminate-e337f44c{0%{width:30%;left:-40%}60%{left:100%;width:100%}to{left:100%;width:0}}.progressbar[data-v-e337f44c]{transition:width .25s ease}.indeterminate .progressbar[data-v-e337f44c]{animation:progress-indeterminate-e337f44c 1.4s ease infinite}

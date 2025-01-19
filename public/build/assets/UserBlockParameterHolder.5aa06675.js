@@ -1,0 +1,1 @@
+class s{constructor(){this.loginUserId="",this.addedUserId=""}UserBlockParameterHolder(){this.loginUserId="",this.addedUserId=""}toMap(){const r={};return r.from_block_user_id=this.loginUserId,r.to_block_user_id=this.addedUserId,r}}export{s as U};

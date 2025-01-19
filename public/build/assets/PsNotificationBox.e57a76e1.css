@@ -1,0 +1,1 @@
+#notification-box{display:flex;position:fixed;right:5px;height:100px;background-color:#fff;z-index:1;border:1px dotted black;border-radius:12px}#notification-close{position:fixed;color:#777;font:14px;right:10px;text-decoration:none;text-shadow:0 1px 0 #fff;top:6px;z-index:10;cursor:pointer}img{width:50px}

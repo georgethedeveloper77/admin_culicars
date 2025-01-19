@@ -1,0 +1,1 @@
+class s{constructor(){this.typeId="",this.typeName="",this.userId=""}TouchCountParameterHolder(){this.typeId="",this.typeName="",this.userId=""}toMap(){const t={};return t.type_id=this.typeId,t.type_name=this.typeName,t.user_id=this.userId,t}}export{s as T};

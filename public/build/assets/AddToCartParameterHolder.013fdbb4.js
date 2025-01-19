@@ -1,0 +1,1 @@
+class s{constructor(){this.vendorId="",this.itemId="",this.quantity="",this.userId="",this.isSelect=""}AddToCartParameterHolder(){this.vendorId="",this.itemId="",this.quantity="",this.userId="",this.isSelect=""}toMap(){const t={};return t.vendor_id=this.vendorId,t.item_id=this.itemId,t.quantity=this.quantity,t.user_id=this.userId,t.is_select=this.isSelect,t}}export{s as A};

@@ -1,0 +1,1 @@
+class r{constructor(){this.email="",this.userId="",this.code=""}UserEmailVerifyParameterHolder(){this.email="",this.userId="",this.code=""}toMap(){const e={};return e.email=this.email,e.user_id=this.userId,e.code=this.code,e}}export{r as U};
